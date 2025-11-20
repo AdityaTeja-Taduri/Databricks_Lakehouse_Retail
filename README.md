@@ -34,35 +34,39 @@ These tables look like what a BI or analytics team would use in real life.
 
 ## 📁 Repository Structure
 
-databricks-lakehouse-retail:
-  notebooks:
-    - 00_generate_retail_raw.py
-    - 01_bronze_autoloader.py
-    - 02_silver_cleaning.py
-    - 03_gold_business.py
+```
+databricks-lakehouse-retail/
+│
+├── notebooks/                       # Python versions of all notebooks
+│   ├── 00_generate_retail_raw.py
+│   ├── 01_bronze_autoloader.py
+│   ├── 02_silver_cleaning.py
+│   └── 03_gold_business.py
+│
+├── databricks/                      # Databricks-native notebook exports
+│   ├── 00_generate_retail_raw.dbc
+│   ├── 01_bronze_autoloader.dbc
+│   ├── 02_silver_cleaning.dbc
+│   └── 03_gold_business.dbc
+│
+├── sql/                             # SQL view layer 
+│   ├── daily_sales_view.sql
+│   ├── top_categories_view.sql
+│   └── customer_ltv_view.sql
+│
+├── screenshots/                     # Visuals from the Databricks workspace
+│   ├── catalog_structure.png
+│   ├── bronze_preview.png
+│   ├── silver_preview.png
+│   ├── gold_preview.png
+│   └── architecture_diagram.png
+│
+├── architecture/                    # Architecture diagram(s)
+│   └── lakehouse_diagram.png
+│
+└── README.md                        # Main documentation file
+```
 
-  databricks:
-    - 00_generate_retail_raw.dbc
-    - 01_bronze_autoloader.dbc
-    - 02_silver_cleaning.dbc
-    - 03_gold_business.dbc
-
-  sql:
-    - daily_sales_view.sql
-    - top_categories_view.sql
-    - customer_ltv_view.sql
-
-  screenshots:
-    - catalog_structure.png
-    - bronze_preview.png
-    - silver_preview.png
-    - gold_preview.png
-    - architecture_diagram.png
-
-  architecture:
-    - lakehouse_diagram.png
-
-  README.md: (main documentation file)
 
 ---
 
