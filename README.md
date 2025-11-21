@@ -28,8 +28,6 @@ Creates 3 analytics tables:
 - **Top Categories**  
 - **Customer Lifetime Value**
 
-These tables look like what a BI or analytics team would use in real life.
-
 ---
 
 ## 📁 Repository Structure
@@ -90,7 +88,6 @@ databricks-lakehouse-retail/
 5. Run notebook **02** to clean the data.  
 6. Run notebook **03** to produce business tables.
 
-You can also import the `.dbc` files directly into Databricks for a one-click setup.
 
 ---
 
@@ -102,8 +99,6 @@ This project mirrors what Data Engineers do in real companies:
 - Cleaning real-world messy data  
 - Building analytical tables  
 - Organizing code in a clear project structure  
-
-It’s a strong portfolio piece for Data Engineer / Databricks roles.
 
 ---
 
@@ -143,7 +138,6 @@ Raw CSV (Volume)
        Gold Business Marts (Gold)
    daily_sales · top_categories · customer_lifetime_value
 
-That alone already explains the architecture clearly.
 
 ---
 
