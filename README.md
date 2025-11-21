@@ -112,3 +112,38 @@ It’s a strong portfolio piece for Data Engineer / Databricks roles.
 Screenshots of the catalog, Bronze/Silver/Gold tables, and pipeline flow are included in the `screenshots/` folder.
 
 ---
+
+## 🧱 Architecture
+
+This project follows the Databricks Lakehouse medallion pattern:
+
+- **Storage:** Databricks Volumes in Unity Catalog (`/Volumes/workspace/bronze/raw_retail`)
+- **Bronze:** Auto Loader ingests raw CSV files into `workspace.bronze.retail_orders_bronze`
+- **Silver:** Cleaning, type casting, validation, and enrichment into `workspace.silver.retail_orders_silver`
+- **Gold:** Business-ready tables:
+  - `workspace.gold.daily_sales`
+  - `workspace.gold.top_categories`
+  - `workspace.gold.customer_lifetime_value`
+
+High-level flow:
+
+```text
+Raw CSV (Volume)
+/Volumes/workspace/bronze/raw_retail
+                │
+                ▼
+        Auto Loader (Bronze)
+ workspace.bronze.retail_orders_bronze
+                │
+                ▼
+     Cleaning & Enrichment (Silver)
+ workspace.silver.retail_orders_silver
+                │
+                ▼
+       Gold Business Marts (Gold)
+   daily_sales · top_categories · customer_lifetime_value
+
+That alone already explains the architecture clearly.
+
+---
+
