@@ -5,6 +5,19 @@ I used Unity Catalog, Auto Loader, Delta Lake, and Databricks Volumes to create 
 
 ---
 
+## 🛠️ Tech Stack
+
+- **Databricks Lakehouse Platform**
+- **Unity Catalog** (governance, schema management, permissions)
+- **Delta Lake** (Bronze → Silver → Gold storage)
+- **PySpark** (ETL transformations)
+- **Auto Loader** (streaming ingestion)
+- **Photon Engine** (optimized execution)
+- **SQL** (views & business aggregations)
+- **MLflow** (optional lineage and tracking)
+
+---
+
 ## 🚀 What This Project Does
 
 ### 1. **Generates a retail dataset**
